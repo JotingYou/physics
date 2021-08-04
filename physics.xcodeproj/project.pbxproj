@@ -13,6 +13,10 @@
 		5C450EBA26BA168500414D78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C450EB826BA168500414D78 /* Main.storyboard */; };
 		5C450EBC26BA168600414D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C450EBB26BA168600414D78 /* Assets.xcassets */; };
 		5C450EBF26BA168600414D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C450EBD26BA168600414D78 /* LaunchScreen.storyboard */; };
+		5C450EC726BA1B8100414D78 /* YJMoonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C450EC626BA1B8100414D78 /* YJMoonModel.swift */; };
+		5C450EC926BA1C7800414D78 /* YJMoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C450EC826BA1C7800414D78 /* YJMoonView.swift */; };
+		5C450ECB26BA1F0E00414D78 /* YJEarthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C450ECA26BA1F0E00414D78 /* YJEarthModel.swift */; };
+		5C450ECE26BA651B00414D78 /* YJSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C450ECD26BA651B00414D78 /* YJSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5C450EBB26BA168600414D78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C450EBE26BA168600414D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C450EC026BA168600414D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C450EC626BA1B8100414D78 /* YJMoonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJMoonModel.swift; sourceTree = "<group>"; };
+		5C450EC826BA1C7800414D78 /* YJMoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJMoonView.swift; sourceTree = "<group>"; };
+		5C450ECA26BA1F0E00414D78 /* YJEarthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJEarthModel.swift; sourceTree = "<group>"; };
+		5C450ECD26BA651B00414D78 /* YJSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		5C450EB126BA168500414D78 /* physics */ = {
 			isa = PBXGroup;
 			children = (
+				5C450EC826BA1C7800414D78 /* YJMoonView.swift */,
+				5C450ECC26BA25B100414D78 /* Model */,
 				5C450EB226BA168500414D78 /* AppDelegate.swift */,
 				5C450EB426BA168500414D78 /* SceneDelegate.swift */,
 				5C450EB626BA168500414D78 /* ViewController.swift */,
@@ -63,8 +73,18 @@
 				5C450EBB26BA168600414D78 /* Assets.xcassets */,
 				5C450EBD26BA168600414D78 /* LaunchScreen.storyboard */,
 				5C450EC026BA168600414D78 /* Info.plist */,
+				5C450ECD26BA651B00414D78 /* YJSettingViewController.swift */,
 			);
 			path = physics;
+			sourceTree = "<group>";
+		};
+		5C450ECC26BA25B100414D78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C450EC626BA1B8100414D78 /* YJMoonModel.swift */,
+				5C450ECA26BA1F0E00414D78 /* YJEarthModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C450EC726BA1B8100414D78 /* YJMoonModel.swift in Sources */,
 				5C450EB726BA168500414D78 /* ViewController.swift in Sources */,
 				5C450EB326BA168500414D78 /* AppDelegate.swift in Sources */,
+				5C450ECB26BA1F0E00414D78 /* YJEarthModel.swift in Sources */,
+				5C450ECE26BA651B00414D78 /* YJSettingViewController.swift in Sources */,
+				5C450EC926BA1C7800414D78 /* YJMoonView.swift in Sources */,
 				5C450EB526BA168500414D78 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
