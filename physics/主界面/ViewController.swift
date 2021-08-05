@@ -12,7 +12,17 @@ class ViewController: UIViewController {
     let earth = YJEarthModel()
     var pathLayer:CAShapeLayer!
     var duration = 0.0
+    var formula = GravitationalFormula.square
     
+    @IBAction func showSetting(_ sender: Any) {
+        let controller = YJSettingViewController()
+        controller.modalPresentationStyle = .formSheet
+        controller.delegate = self
+        controller.distance = moonView.model.distance
+        controller.relation = formula
+        present(controller, animated: true, completion: nil)
+        
+    }
     @IBOutlet weak var earthView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +30,16 @@ class ViewController: UIViewController {
         moonView.config(moonModel)
         //添加到视图中
         view.addSubview(moonView)
-
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         runMoon()
         runEarth()
     }
+    ///开始月球自转与公转
     func runMoon(_ formula:GravitationalFormula = .square) {
         //绘制自转和公转动画
+        self.formula = formula
         let result = moonView.run(earth.quliaty, view.center, formula)
         duration = result.duration
         let path = result.path
@@ -55,6 +66,7 @@ class ViewController: UIViewController {
         view.layer.addSublayer(pathLayer)
 
     }
+    ///开始地球自转
     func runEarth() {
         earthView.layer.removeAnimation(forKey: "rotation")
         // 创建动画
@@ -69,4 +81,9 @@ class ViewController: UIViewController {
     }
 
 }
-
+extension ViewController:YJSettingViewControllerDelegate{
+    func changed(_ relation: GravitationalFormula, _ diatance: OrbitLevel) {
+        moonView.model.distance = diatance
+        runMoon(relation)
+    }
+}

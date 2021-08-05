@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YJSettingViewController" customModule="physics" customModuleProvider="target">
+            <connections>
+                <outlet property="distanceSegment" destination="1HZ-uI-iZw" id="3j2-0c-TcT"/>
+                <outlet property="relationSegment" destination="MB7-9v-Ffg" id="hz8-PF-zLv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1HZ-uI-iZw">
+                    <rect key="frame" x="5" y="548" width="404" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="HYD-lK-cTh"/>
+                    </constraints>
+                    <segments>
+                        <segment title="非常低"/>
+                        <segment title="低"/>
+                        <segment title="中"/>
+                        <segment title="高"/>
+                        <segment title="非常高"/>
+                    </segments>
+                    <connections>
+                        <action selector="distanceChanged:" destination="-1" eventType="valueChanged" id="3dC-YO-pzI"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MB7-9v-Ffg">
+                    <rect key="frame" x="5" y="678" width="404" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="940-9q-f0s"/>
+                    </constraints>
+                    <segments>
+                        <segment title="线性"/>
+                        <segment title="无关"/>
+                        <segment title="反比"/>
+                        <segment title="正常"/>
+                        <segment title="反立方"/>
+                    </segments>
+                    <connections>
+                        <action selector="relationChanged:" destination="-1" eventType="valueChanged" id="cx1-9e-KEE"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="轨道高度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9L-Xh-SkD">
+                    <rect key="frame" x="172" y="507" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="万有引力与距离的关系" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veE-2z-eg1">
+                    <rect key="frame" x="120" y="637" width="174" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数据根据设备显示范围进行了调整。模拟结果，仅供参考" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBH-AT-YY3">
+                    <rect key="frame" x="79.5" y="796" width="255.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="veE-2z-eg1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="45I-d1-P8D"/>
+                <constraint firstItem="MB7-9v-Ffg" firstAttribute="top" secondItem="1HZ-uI-iZw" secondAttribute="bottom" constant="100" id="EGR-gW-k0u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MB7-9v-Ffg" secondAttribute="trailing" constant="5" id="K4J-TE-fFG"/>
+                <constraint firstItem="MB7-9v-Ffg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="OaB-Td-dpj"/>
+                <constraint firstItem="G9L-Xh-SkD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="R9l-pK-dC4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1HZ-uI-iZw" secondAttribute="trailing" constant="5" id="RWX-t6-tr5"/>
+                <constraint firstItem="1HZ-uI-iZw" firstAttribute="top" secondItem="G9L-Xh-SkD" secondAttribute="bottom" constant="20" id="Tsc-ZM-RhT"/>
+                <constraint firstItem="MB7-9v-Ffg" firstAttribute="top" secondItem="veE-2z-eg1" secondAttribute="bottom" constant="20" id="chr-Mh-x4Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RBH-AT-YY3" secondAttribute="bottom" id="fng-rf-icw"/>
+                <constraint firstItem="RBH-AT-YY3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nZL-gg-T8X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MB7-9v-Ffg" secondAttribute="bottom" constant="100" id="pkD-tD-u8e"/>
+                <constraint firstItem="1HZ-uI-iZw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="sYD-R8-CHF"/>
+            </constraints>
+            <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-43" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

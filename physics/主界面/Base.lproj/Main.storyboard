@@ -27,8 +27,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-hT-CH1">
-                                <rect key="frame" x="374" y="20" width="20" height="20"/>
+                                <rect key="frame" x="374" y="44" width="20" height="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="showSetting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBr-Sl-pVJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,7 +41,7 @@
                             <constraint firstItem="dTE-mX-2LU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lmf-iY-xm2"/>
                             <constraint firstItem="dYN-sM-ErZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zhw-iy-VgU"/>
                             <constraint firstAttribute="trailing" secondItem="dYN-sM-ErZ" secondAttribute="trailing" id="ecH-SH-c2o"/>
-                            <constraint firstItem="JZ7-hT-CH1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="j9U-S1-Wxi"/>
+                            <constraint firstItem="JZ7-hT-CH1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j9U-S1-Wxi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JZ7-hT-CH1" secondAttribute="trailing" constant="20" id="q4D-Bd-SuO"/>
                             <constraint firstAttribute="bottom" secondItem="dYN-sM-ErZ" secondAttribute="bottom" id="qdU-Ky-jVm"/>
                             <constraint firstItem="dTE-mX-2LU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t3e-hM-1i4"/>

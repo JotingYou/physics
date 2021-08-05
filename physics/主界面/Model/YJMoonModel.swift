@@ -7,9 +7,11 @@
 
 import Foundation
 enum OrbitLevel:Double {
+    case veryHight = 484
     case high = 384
     case defalut = 284
     case low = 184
+    case veryLow = 84
 }
 enum GravitationalFormula:Int {
     case Inversely = -1
@@ -32,7 +34,7 @@ struct YJMoonModel{
     var speed = 0.0
     ///缩小1000 倍
     ///单位：km
-    var distance = OrbitLevel.defalut
+    var distance = OrbitLevel.low
 
     ///角速度
     /// rad/s
